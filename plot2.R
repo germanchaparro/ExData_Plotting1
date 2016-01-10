@@ -29,7 +29,11 @@ householdPC_DF <- filter( householdPC_DF, dmy(Date) == ymd(initDate) | dmy(Date)
 
 # plot the data
 print("Plotting data...")
+
+# setup png device
 png(filename = outputFileName, width = 480, height = 480)
+
+# plot 1st graph
 plot( dmy_hms ( paste ( householdPC_DF$Date, householdPC_DF$Time, sep = " " ) ), 
       householdPC_DF$Global_active_power, type = "n", xlab = "", ylab = "Global Active Power (kilowatts)")
 lines( dmy_hms(paste(householdPC_DF$Date, householdPC_DF$Time, sep = " ") ), 

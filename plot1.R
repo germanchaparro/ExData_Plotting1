@@ -28,7 +28,11 @@ householdPC_DF <- filter( householdPC_DF, dmy(Date) == ymd(initDate) | dmy(Date)
 
 # plot the data
 print("Plotting data...")
+
+# setup png device
 png(filename = outputFileName, width = 480, height = 480)
+
+# plot 1st graph
 hist( householdPC_DF$Global_active_power, main = "Global Active Power", 
       col = "red", xlab = "Global Active Power (kilowatts)" )
 

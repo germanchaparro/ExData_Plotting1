@@ -29,7 +29,7 @@ householdPC_DF <- filter( householdPC_DF, dmy(Date) == ymd(initDate) | dmy(Date)
 # plot the data
 print("Plotting data...")
 
-
+# setup png device
 png(filename = outputFileName, width = 480, height = 480)
 
 # set up the canvas in 2x2 by column
